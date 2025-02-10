@@ -6,7 +6,7 @@
 /*   By: japostad <japostad@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:06:50 by japostad          #+#    #+#             */
-/*   Updated: 2024/12/30 17:31:37 by japostad         ###   ########.fr       */
+/*   Updated: 2025/02/10 15:07:13 by japostad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void	ft_str_toupper(char *str);
 #endif

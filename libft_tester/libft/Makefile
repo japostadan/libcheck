@@ -6,7 +6,7 @@
 #    By: japostad <japostad@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 16:59:24 by japostad          #+#    #+#              #
-#    Updated: 2025/01/11 16:44:24 by japostad         ###   ########.fr        #
+#    Updated: 2025/02/10 15:06:37 by japostad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,8 @@ SRC = ft_putnbr_fd.c \
 	 ft_isprint.c \
 	 ft_isalnum.c \
 	 ft_isdigit.c \
-	 ft_isalpha.c 
+	 ft_isalpha.c \
+	 ft_str_toupper.c
 
 B_SRC = ft_lstnew.c \
 		ft_lstadd_front.c \
