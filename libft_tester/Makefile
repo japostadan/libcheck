@@ -1,22 +1,29 @@
-NAME = libftprintf.a
-CC = gcc
+# Makefile for libft tester
+
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC_FILES = ft_printf.c ft_printf_char.c ft_printf_string.c ft_printf_int.c ft_printf_pointer.c ft_printf_uint.c ft_printf_hexa.c ft_printf_percent.c utils.c
-OBJ_FILES = $(SRC_FILES:.c=.o)
+LIBFT_PATH = ../libft/
+TESTER_NAME = libft_tester
 
-all: $(NAME)
+SRC = tester.c
+OBJ = $(SRC:.c=.o)
 
-$(NAME): $(OBJ_FILES)
-	ar rcs $(NAME) $(OBJ_FILES)
+all: $(TESTER_NAME)
 
-%.o: %.c Makefile ft_printf.h
-	$(CC) $(CFLAGS) -c $< -o $@
+$(TESTER_NAME): $(OBJ)
+	make -C $(LIBFT_PATH)
+	$(CC) $(CFLAGS) $(OBJ) -L$(LIBFT_PATH) -lft -o $(TESTER_NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -I$(LIBFT_PATH) -c $< -o $@
 
 clean:
-	rm -f $(OBJ_FILES)
+	rm -f $(OBJ)
+	make -C $(LIBFT_PATH) clean
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(TESTER_NAME)
+	make -C $(LIBFT_PATH) fclean
 
 re: fclean all
 
