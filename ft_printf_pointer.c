@@ -6,7 +6,7 @@
 /*   By: japostad <japostad@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:52:46 by japostad          #+#    #+#             */
-/*   Updated: 2025/02/10 17:28:13 by japostad         ###   ########.fr       */
+/*   Updated: 2025/02/10 17:38:29 by japostad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int	ft_printf_pointer(char const format, va_list ap, int *len)
 			return (*len);
 		}
 		ft_printf_putnbr(format, to_write, len);
+		free(to_write);
 	}
-	free(to_write);
+	//free(to_write);
 	return (*len);
 }
