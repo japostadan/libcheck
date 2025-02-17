@@ -34,6 +34,5 @@ int	ft_printf_pointer(char const format, va_list ap, int *len)
 		ft_printf_putnbr(format, to_write, len);
 		free(to_write);
 	}
-	//free(to_write);
 	return (*len);
 }
